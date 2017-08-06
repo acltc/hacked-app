@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QCH</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="/css/old-bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/bootstrap-theme.css" rel="stylesheet" type="text/css" media="all" />
+    
+  </head>
+
+  <body style="visibility: hidden">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          </button>
+          <a class="brand" href="/">QCH</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="/">Main Terminal</a>
+              </li>
+              <li class="">
+                <a href="#">Phishing</a>
+              </li>
+              <li class="">
+                <a href="#">Cyber Warfare</a>
+              </li>
+              <li class="">
+                <a href="#">Ransomware</a>
+              </li>
+              <li class="">
+                <a href="#">Virus Development</a>
+              </li>
+              <li class="">
+                <a href="#">Nuclear Program</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <%= yield %>
+
+    </div>
+
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script type="text/javascript">_386 = { onePass: true, speedFactor: 0.5 };</script>
+  </body>
+</html>

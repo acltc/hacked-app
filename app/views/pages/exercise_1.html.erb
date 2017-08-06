@@ -1,0 +1,18 @@
+<div class="jumbotron masthead">
+  <div class="container">
+    <br>
+    <br>
+    <h1>Quizikistan Central Headquarters</h1>
+    <br>
+  </div>
+</div>
+
+<p>ENTER PASSKEY. UNAUTHORIZED USERS PUNISHED EXTREMELY.</p>
+
+<%= form_tag "/check_1" do %>
+  <%= text_field_tag :passkey %>
+  <br>
+  <%= submit_tag :submit, class: "btn btn-primary btn-large" %>
+<% end %>
+
+<p>IF YOU UNAUTHORIZED, WE HUNT YOU DOWN.</p>

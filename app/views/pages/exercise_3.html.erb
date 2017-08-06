@@ -1,0 +1,20 @@
+<div class="jumbotron masthead">
+  <div class="container">
+    <br>
+    <br>
+    <h1>SUSPICIOUS ACTIVITY DETECTED!!!</h1>
+    <br>
+  </div>
+</div>
+
+<p>REASON: UKNOWN DEVICE.</p>
+
+<p>TO BE TRIPLE SURE OF AUTHORIZATION, ENTER THIRD PASSKEY:</p>
+
+<%= form_tag "/check_3" do %>
+  <%= text_field_tag :passkey %>
+  <br>
+  <%= submit_tag :submit, class: "btn btn-primary btn-large" %>
+<% end %>
+
+<p>note: THIS IS THE FINAL HAY.</p>
