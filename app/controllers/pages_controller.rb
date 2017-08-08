@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   def exercise_1
-
   end
 
   def check_1
@@ -12,7 +11,6 @@ class PagesController < ApplicationController
   end
 
   def exercise_2
-
   end
 
   def check_2
@@ -24,7 +22,6 @@ class PagesController < ApplicationController
   end
 
   def exercise_3
-
   end
 
   def check_3
@@ -36,7 +33,45 @@ class PagesController < ApplicationController
   end
 
   def pass_1
-
   end
+
+  def exercise_4
+  end
+
+  def check_4
+    if params[:agent_name] =~ /\wa\wo\wa/
+      redirect_to "/uux"
+    else
+      redirect_to "/phishing"
+    end
+  end
+
+  def exercise_5
+  end
+
+  def check_5
+    if params[:secret_code].to_i == SecretCode.check_1
+      redirect_to "/uutx"
+    else
+      redirect_to "/phishing"
+    end
+  end
+
+  def exercise_6
+    if !cookies[:number] || params[:start] == "over"
+      cookies[:number] = 0
+    end
+    if params[:button]
+      cookies[:number] = SecretCode.change(cookies[:number].to_i, params[:button].to_i)
+    end
+    @number = cookies[:number]
+    if @number == 13
+      redirect_to "/uuuutux"
+    end
+  end
+
+  def pass_2
+  end
+
 
 end

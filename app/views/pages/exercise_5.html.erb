@@ -1,0 +1,19 @@
+<div class="jumbotron masthead">
+  <div class="container">
+    <br>
+    <br>
+    <h1>SUSPICIOUS ACTIVITY DETECTED!!!</h1>
+    <br>
+  </div>
+</div>
+
+<p>REASON: user has funny face</p>
+
+<p>Enter secret code</p>
+
+<%= form_tag "/check_5" do %>
+  <%= label_tag :secret_code %>
+  <%= text_field_tag :secret_code %>
+  <br>
+  <%= submit_tag :submit, class: "btn btn-primary btn-large" %>
+<% end %>
