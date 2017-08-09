@@ -96,7 +96,6 @@ class PagesController < ApplicationController
   end
 
   def exercise_9
-    puts "aSDFASF"
     cookies[:cyber]
     if !cookies[:cyber] || params[:start] == "over"
       cookies[:cyber] = 0
@@ -105,7 +104,7 @@ class PagesController < ApplicationController
       cookies[:cyber] = CyberCode.change(cookies[:cyber].to_i, params[:button].to_i)
     end
     @number = cookies[:cyber]
-    if @number == 62
+    if @number == 59
       redirect_to "/ixixi"
     end
   end
