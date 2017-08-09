@@ -39,7 +39,7 @@ class PagesController < ApplicationController
   end
 
   def check_4
-    if params[:agent_name] =~ /\wa\wo\wa/
+    if params[:agent_name].downcase =~ /\wa\wo\wa/
       redirect_to "/uux"
     else
       redirect_to "/phishing"
