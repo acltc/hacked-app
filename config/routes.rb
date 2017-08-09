@@ -21,5 +21,14 @@ Rails.application.routes.draw do
   post '/check_6' => 'pages#check_6'
 
   get '/uuuutux' => 'pages#pass_2'
-  
+
+  get '/cyber-warfare' => 'pages#exercise_7'
+  post '/check_7' => 'pages#check_7'
+
+  get '/iix' => 'pages#exercise_8'
+  post '/check_8' => 'pages#check_8'
+
+  get '/iixi' => 'pages#exercise_9'
+
+  get '/ixixi' => 'pages#pass_3'
 end

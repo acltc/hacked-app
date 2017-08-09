@@ -73,5 +73,42 @@ class PagesController < ApplicationController
   def pass_2
   end
 
+  def exercise_7
+  end
+
+  def check_7
+    if params[:cyber_codes].to_i == CyberCode.check_1
+      redirect_to "/iix"
+    else
+      redirect_to "/cyber-warfare"
+    end
+  end
+
+  def exercise_8
+  end
+
+  def check_8
+    if params[:cyber_codes].to_i == CyberCode.check_2
+      redirect_to "/iixi"
+    else
+      redirect_to "/cyber-warfare"
+    end
+  end
+
+  def exercise_9
+    puts "aSDFASF"
+    cookies[:cyber]
+    if !cookies[:cyber] || params[:start] == "over"
+      cookies[:cyber] = 0
+    end
+    if params[:button]
+      cookies[:cyber] = CyberCode.change(cookies[:cyber].to_i, params[:button].to_i)
+    end
+    @number = cookies[:cyber]
+    if @number == 62
+      redirect_to "/ixixi"
+    end
+  end
+
 
 end
