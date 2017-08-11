@@ -1,0 +1,16 @@
+<div class="jumbotron masthead alert alert-error">
+  <div class="container">
+    <br>
+    <br>
+    <h3>EVERYONE KNOWS THAT PUZZLE - SO BIG DEAL. NOW COME HARD PUZZLE</h3>
+    <br>
+  </div>
+</div>
+
+<p class="lead">What is 1000 - 999 - 998 - 997 ... - 3 - 2 - 1 ?</p>
+
+<%= form_tag "/check_11" do %>
+  <%= text_area_tag :code, nil, {style: "width:1000px; height: 500px;"} %>
+  <br>
+  <%= submit_tag :submit, value: "TURN OFF RANSOMWARE", class: "btn btn-primary btn-large" %>
+<% end %>

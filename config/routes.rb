@@ -31,4 +31,16 @@ Rails.application.routes.draw do
   get '/iixi' => 'pages#exercise_9'
 
   get '/ixixi' => 'pages#pass_3'
+
+  get '/ransomware' => 'pages#exercise_10'
+  post '/check_10' => 'pages#check_10'
+
+  get '/qqqxe' => 'pages#exercise_11'
+  post '/check_11' => 'pages#check_11'
+
+  get '/qrqxe' => 'pages#exercise_12'
+  post '/check_12' => 'pages#check_12'
+
+  get '/rqrqrqex' => 'pages#pass_4'
+
 end
