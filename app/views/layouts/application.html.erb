@@ -36,7 +36,7 @@
                 <a href="/ransomware">Ransomware</a>
               </li>
               <li class="">
-                <a href="#">Virus Development</a>
+                <a href="/virus">Virus Development</a>
               </li>
               <li class="">
                 <a href="#">Nuclear Program</a>
@@ -55,6 +55,10 @@
 
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/bootstrap.js"></script>
-    <script type="text/javascript">_386 = { onePass: true, speedFactor: 0.5 };</script>
+    <% if @disable_386 %>
+      <script type="text/javascript">_386 = { fastLoad: true };</script>
+    <% else %>
+      <script type="text/javascript">_386 = { onePass: true, speedFactor: 0.5 };</script>
+    <% end %>
   </body>
 </html>

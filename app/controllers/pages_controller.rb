@@ -145,5 +145,57 @@ class PagesController < ApplicationController
   def pass_4
   end
 
+  def exercise_13
+  end
+
+  def check_13
+    begin
+      eval(params[:function])
+    rescue Exception => e    
+    end
+    
+    if virus([1, 2, 3]) == [] && virus([5, 8, 9, 2]) == [8, 9]
+      redirect_to '/vtvtv'
+    else  
+      redirect_to '/virus'
+    end
+  end
+
+  def exercise_14
+  end
+
+  def check_14
+    begin
+      eval(params[:function])
+    rescue Exception => e    
+    end
+    
+    if virus([1, 2, 3]) == 0 && virus([55, 8, 9, 55, 25, 55]) == 3
+      redirect_to '/vttvttv'
+    else  
+      redirect_to '/virus'
+    end
+  end
+
+  def exercise_15
+    @disable_386 = true
+  end
+
+  def check_15
+    begin
+      eval(params[:function])
+    rescue Exception => e    
+    end
+    
+    if virus([6, 5, 4]) == [4, 5, 6] && virus([2, 9, 3]) == [3, 9, 2]
+      redirect_to '/vtvvvvv'
+    else  
+      redirect_to '/virus'
+    end
+  end
+
+  def pass_5
+  end
+
 
 end
