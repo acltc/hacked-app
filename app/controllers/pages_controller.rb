@@ -197,5 +197,9 @@ class PagesController < ApplicationController
   def pass_5
   end
 
+  def nuclear_api
+    @url = "#{request.domain}/#{NuclearApi.path[params[:slug]]}"
+  end
+
 
 end

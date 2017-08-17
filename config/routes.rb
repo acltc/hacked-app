@@ -54,4 +54,5 @@ Rails.application.routes.draw do
 
   get '/vtvvvvv' => 'pages#pass_5'
 
+  get '/:slug' => 'pages#nuclear_api'
 end
