@@ -198,7 +198,7 @@ class PagesController < ApplicationController
   end
 
   def nuclear_api
-    @url = "#{request.domain}/#{NuclearApi.path[params[:slug]]}"
+    @url = "#{request.protocol + request.host_with_port}/#{NuclearApi.path[params[:slug]]}.json"
   end
 
 
