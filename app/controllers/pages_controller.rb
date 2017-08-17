@@ -217,7 +217,7 @@ class PagesController < ApplicationController
   end
 
   def nuclear_site
-    @location = {lat: 234, lng: 123}
+    @location = {lat: 43, lng: -107}
   end
 
   def pass_6
