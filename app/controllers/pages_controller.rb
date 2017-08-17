@@ -197,8 +197,31 @@ class PagesController < ApplicationController
   def pass_5
   end
 
+  def nuclear
+  end
+
+  def check_16
+    if params[:passkey].downcase == "password"
+      redirect_to "/llllpl"
+    else
+      redirect_to "/nuclear"
+    end
+  end
+
+  def exercise_16
+    @disable_386 = true
+  end
+
   def nuclear_api
     @url = "#{request.protocol + request.host_with_port}/#{NuclearApi.path[params[:slug]]}.json"
+  end
+
+  def nuclear_site
+    @location = {lat: 234, lng: 123}
+  end
+
+  def pass_6
+    @disable_386 = true
   end
 
 

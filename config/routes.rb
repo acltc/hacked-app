@@ -54,5 +54,12 @@ Rails.application.routes.draw do
 
   get '/vtvvvvv' => 'pages#pass_5'
 
+  get '/nuclear' => 'pages#nuclear'
+  post '/check_16' => 'pages#check_16'
+
+  get '/llllpl' => 'pages#exercise_16'
+  get '/FOZOWUAS' => 'pages#nuclear_site'
+  get '/powpow' => 'pages#pass_6'
+
   get '/:slug' => 'pages#nuclear_api'
 end

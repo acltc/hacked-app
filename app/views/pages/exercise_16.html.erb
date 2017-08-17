@@ -1,0 +1,69 @@
+<br>
+<br>
+<br>
+<a class="btn" href="/OUAENEBX.json" target="_blank">DON'T CLICK</a>
+<br>
+<br>
+<br>
+
+<div id="map" style="width: 400px; height: 400px;"></div>
+
+<label>Lat</label>
+<input id="lat" type="text">
+<label>Lng</label>
+<input id="lng" type="text">
+<button id="button">Button</button>
+
+<div class="foo"></div>
+<div class="bar"></div>
+
+<script>
+  function initMap() {
+    var x = parseInt("2b", 16);
+    var y = parseInt("6b", 16) * -1;
+    var minZoomLevel = 12;
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: minZoomLevel,
+        center: new google.maps.LatLng(41.878, -87.629),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        disableDefaultUI: true
+    });
+
+    var contentString = '<div id="content">'+
+        '<div id="bodyContent">'+
+        '<p><b>Quizikistan Secret Nuclear Weapons Plant</b>' + 
+        '<p><a href="/powpow" class="btn btn-large">'+
+        'DESTROY</a> '+
+        '</p>'+
+        '</div>'+
+        '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    var z = {lat: x, lng: y};
+    var marker = new google.maps.Marker({
+        position: z,
+        map: map,
+        icon: "https://openclipart.org/image/100px/svg_to_png/170536/npp3.png"
+      });
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+
+
+     google.maps.event.addDomListener(document.getElementById("button"), "click", function(ev) {
+           map.setCenter(new google.maps.LatLng(document.getElementById("lat").value, document.getElementById("lng").value))
+          });
+          
+    // Limit the zoom level
+    google.maps.event.addListener(map, 'zoom_changed', function () {
+        if (map.getZoom() < minZoomLevel) map.setZoom(minZoomLevel);
+    });
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUPy2IMGdQaoWYOm6R06zHc09cpyMZM8s&callback=initMap">
+</script>

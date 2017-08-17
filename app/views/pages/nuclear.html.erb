@@ -1,0 +1,16 @@
+<div class="jumbotron masthead">
+  <div class="container">
+    <br>
+    <br>
+    <h1>TO PROCEED - ENTER PASSWORD</h1>
+    <br>
+  </div>
+</div>
+
+<p>ENTER PASSWORD.</p>
+
+<%= form_tag "/check_16" do %>
+  <%= text_field_tag :passkey %>
+  <br>
+  <%= submit_tag :submit, class: "btn btn-primary btn-large" %>
+<% end %>
