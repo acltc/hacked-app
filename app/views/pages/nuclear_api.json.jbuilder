@@ -1,1 +1,1 @@
-json.url @url
+json.dont_click @url
